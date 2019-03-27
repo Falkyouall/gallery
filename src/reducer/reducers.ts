@@ -1,10 +1,7 @@
-
-import { combineReducers } from 'redux'
-import counter from './counter'
+import {combineReducers} from 'redux'
 import carousel from "./carousel";
 
 const rootReducer = combineReducers({
-    counter,
     carousel
 })
 

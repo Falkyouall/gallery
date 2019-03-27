@@ -24,14 +24,12 @@ const Carousel = (props: any) => {
         onSwipedRight: () => slide(PREV),
         trackMouse: true
     };
-    console.log("hi ", state)
 
     return (
         <Swipeable {...config}>
             <Wrapper>
                 <CarouselContainer dir={state.dir} sliding={state.sliding}>
                     {images.map((child: HTMLDivElement, index: any) => (
-                        // @ts-ignore
                         <CarouselSlot
                             key={index}
                             order={getOrder({index: index, pos: state.pos, numItems})}

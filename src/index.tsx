@@ -7,7 +7,6 @@ import * as serviceWorker from './serviceWorker';
 import {Provider} from 'react-redux'
 import configureStore from './store'
 
-// Create a new Redux store instance
 const store = configureStore()
 
 ReactDOM.render(

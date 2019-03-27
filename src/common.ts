@@ -24,7 +24,7 @@ export const Wrapper = styled.div`
   box-shadow: 5px 5px 20px 7px rgba(168, 168, 168, 1);
 `;
 
-export const CarouselSlot = styled.div`
+export const CarouselSlot: any = styled.div`
   flex: 1 0 100%;
   flex-basis: 80%;
   margin-right: 20px;

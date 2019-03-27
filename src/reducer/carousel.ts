@@ -1,9 +1,14 @@
 import {NEXT, PREV} from "../actions/actions";
 
+export type CarouselType = {
+    pos: number
+    sliding: boolean
+    dir: string
+}
 
-const initialState:any = { pos: 0, sliding: false, dir: NEXT };
+const initialState: CarouselType = {pos: 0, sliding: false, dir: NEXT};
 
-const carousel = (state:any = initialState, { type, numItems }: any) => {
+const carousel = (state: any = initialState, {type, numItems}: any) => {
     switch (type) {
         case "reset":
             return initialState;
@@ -22,7 +27,7 @@ const carousel = (state:any = initialState, { type, numItems }: any) => {
                 pos: state.pos === numItems - 1 ? 0 : state.pos + 1
             };
         case "stopSliding":
-            return { ...state, sliding: false };
+            return {...state, sliding: false};
         default:
             return state;
     }
